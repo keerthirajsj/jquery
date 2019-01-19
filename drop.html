@@ -1,0 +1,45 @@
+<html>
+   <head>
+      <title>The jQuery Example</title>
+      <script type = "text/javascript" 
+         src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+      </script>
+		
+      <script type = "text/javascript" 
+         src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js">
+      </script>
+		
+      <script type = "text/javascript" language = "javascript">
+   
+         $(function() {
+            $( "#draggable" ).draggable();
+				
+            $( "#droppable" ).droppable({
+               drop: function( event, ui ) {
+                  $( this ).addClass( "ui-state-highlight" ).find( "p" ).html( "Dropped!" );
+               }
+            });
+         });
+		 
+      </script>
+		
+      <style>
+         #draggable { width: 100px; height: 100px; 
+            padding: 0.5em; float: left; margin: 10px 10px 10px 0; }
+         #droppable { width: 150px; height: 150px; 
+            padding: 0.5em; float: left; margin: 10px; }
+      </style>
+   </head>
+	
+   <body>
+      <div id = "draggable" class = "ui-widget-content">
+         <p>Drag</p>
+      </div>
+
+ 
+      <div id = "droppable" class = "ui-widget-header">
+         <p style = "background-color: aquamarine;height: 50;">Drop here</p>
+      </div>
+	 
+   </body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+   <head>
+      <title>The jQuery Example</title>
+      <script type = "text/javascript" 
+         src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+      </script>
+		
+      <script type = "text/javascript" language = "javascript">
+         $(document).ready(function() {
+            var info = $("em").attr("title");
+            $("#divid").text(info);
+         });
+      </script>
+   </head>
+	
+   <body>
+      <div>
+         <em title = "My name is sada">This is first paragraph.</em>
+         <p id = "myid">This is second paragraph.</p>
+         <div id = "divid"></div>
+      </div>
+   </body>
+</html>
